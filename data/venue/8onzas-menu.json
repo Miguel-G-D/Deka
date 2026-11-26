@@ -1,0 +1,59 @@
+{
+  "venue_id": "8onzas",
+  "currency": "ARS",
+  "categories": [
+    {
+      "id": "cafe",
+      "name": "Café",
+      "items": [
+        {
+          "id": "espresso",
+          "name": "Espresso",
+          "description": "Café corto",
+          "price": 2500,
+          "tags": ["coffee"]
+        },
+        {
+          "id": "latte",
+          "name": "Latte",
+          "description": "Espresso con leche vaporizada",
+          "price": 3800,
+          "tags": ["coffee", "milk"]
+        }
+      ]
+    },
+    {
+      "id": "brunch",
+      "name": "Brunch",
+      "items": [
+        {
+          "id": "avocado-toast",
+          "name": "Avocado toast",
+          "description": "Pan sourdough, palta, semilla",
+          "price": 7200,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "bowl-vegano",
+          "name": "Bowl vegano",
+          "description": "Quinoa, garbanzos, verduras de estación",
+          "price": 8500,
+          "tags": ["vegan", "vegetarian"]
+        }
+      ]
+    },
+    {
+      "id": "dulce",
+      "name": "Dulce",
+      "items": [
+        {
+          "id": "medialuna",
+          "name": "Medialuna",
+          "description": "Manteca",
+          "price": 1800,
+          "tags": []
+        }
+      ]
+    }
+  ]
+}

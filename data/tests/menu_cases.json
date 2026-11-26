@@ -1,0 +1,51 @@
+{
+  "venue_id": "8onzas",
+  "cases": [
+    {
+      "id": "price-latte",
+      "capability": "menu",
+      "user": "¿Cuánto sale el latte?",
+      "expect": {
+        "product_id": "latte",
+        "product_found": true,
+        "price": 3800,
+        "currency": "ARS",
+        "must_mention": ["latte", "3800"]
+      }
+    },
+    {
+      "id": "has-vegan-bowl",
+      "capability": "menu",
+      "user": "¿Tienen opciones veganas?",
+      "expect": {
+        "product_id": "bowl-vegano",
+        "product_found": true,
+        "must_mention": ["bowl vegano"],
+        "must_not_mention": ["no tenemos vegano"]
+      }
+    },
+    {
+      "id": "hours-friday",
+      "capability": "hours",
+      "user": "¿A qué hora abren el viernes?",
+      "expect": {
+        "product_id": null,
+        "product_found": false,
+        "day": "friday",
+        "open": "09:00",
+        "close": "22:00",
+        "must_mention": ["09:00", "22:00"]
+      }
+    },
+    {
+      "id": "unknown-sushi",
+      "capability": "unknown_item",
+      "user": "¿Tienen sushi?",
+      "expect": {
+        "product_id": null,
+        "product_found": false,
+        "must_not_mention": ["tenemos sushi"]
+      }
+    }
+  ]
+}

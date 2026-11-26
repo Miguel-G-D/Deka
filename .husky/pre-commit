@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -e
+
+npm run lint
+npm run typecheck
+npm run test:py
+npm run test:js
+npm run test:e2e

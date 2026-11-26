@@ -1,0 +1,75 @@
+[project]
+name = "deka"
+version = "0.1.0"
+description = "Deka monorepo Python workspace"
+requires-python = ">=3.12"
+dependencies = [
+  "deka-backend",
+  "deka-agent",
+]
+
+[tool.uv.workspace]
+members = ["backend", "agent"]
+
+[tool.uv.sources]
+deka-backend = { workspace = true }
+deka-agent = { workspace = true }
+
+[dependency-groups]
+dev = [
+  "ruff>=0.11.0",
+  "bandit>=1.8.0",
+  "pylint>=3.3.0",
+  "pyright>=1.1.400",
+  "pytest>=8.3.0",
+  "pytest-cov>=6.0.0",
+  "httpx>=0.28.0",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+src = ["backend/src", "agent/src"]
+
+[tool.ruff.lint]
+select = ["E", "W", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests", "agent/tests"]
+pythonpath = ["backend/src", "agent/src"]
+addopts = [
+  "--cov=backend",
+  "--cov=agent",
+  "--cov-report=term-missing",
+  "--cov-fail-under=80",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["backend", "agent"]
+
+[tool.coverage.report]
+omit = ["*/tests/*"]
+show_missing = true
+
+[tool.pyright]
+pythonVersion = "3.12"
+include = ["backend/src", "agent/src"]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "basic"
+
+[tool.pylint.main]
+ignore-paths = [".venv", "frontend", "e2e", "lab", "data", "docs"]
+jobs = 0
+
+[tool.pylint.messages_control]
+disable = [
+  "missing-module-docstring",
+  "missing-class-docstring",
+  "missing-function-docstring",
+  "too-few-public-methods",
+]
+
+[tool.bandit]
+exclude_dirs = [".venv", "tests", "frontend", "e2e", "lab"]

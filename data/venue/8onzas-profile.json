@@ -1,0 +1,22 @@
+{
+  "venue_id": "8onzas",
+  "name": "8onzas",
+  "assistant_name": "asistente de 8onzas",
+  "greeting": "Hola, soy el asistente de 8onzas, ¿en qué te puedo ayudar?",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "hours": {
+    "monday": null,
+    "tuesday": { "open": "09:00", "close": "20:00" },
+    "wednesday": { "open": "09:00", "close": "20:00" },
+    "thursday": { "open": "09:00", "close": "20:00" },
+    "friday": { "open": "09:00", "close": "22:00" },
+    "saturday": { "open": "10:00", "close": "22:00" },
+    "sunday": { "open": "10:00", "close": "18:00" }
+  },
+  "spaces": ["table", "terrace", "birthday"],
+  "reservation_rules": {
+    "max_party_size": 12,
+    "min_party_size": 1,
+    "advance_hours": 2
+  }
+}

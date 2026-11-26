@@ -1,0 +1,101 @@
+{
+  "clients": [
+    { "id": "cli-1", "name": "Ana Pérez", "phone": "+5491100000001" },
+    { "id": "cli-2", "name": "Bruno Díaz", "phone": "+5491100000002" },
+    { "id": "cli-3", "name": "Carla Gómez", "phone": "+5491100000003" },
+    { "id": "cli-4", "name": "Diego Ruiz", "phone": "+5491100000004" },
+    { "id": "cli-5", "name": "Elena Soto", "phone": "+5491100000005" }
+  ],
+  "processes": [
+    {
+      "id": "proc-1",
+      "client_id": "cli-1",
+      "status": "interested",
+      "party_size": 2,
+      "space_type": "table",
+      "received_at": "2026-11-18T10:00:00+00:00",
+      "needs_human": true
+    },
+    {
+      "id": "proc-2",
+      "client_id": "cli-1",
+      "status": "confirmed",
+      "party_size": 4,
+      "space_type": "terrace",
+      "received_at": "2026-11-19T12:30:00+00:00",
+      "needs_human": false
+    },
+    {
+      "id": "proc-3",
+      "client_id": "cli-2",
+      "status": "reserved",
+      "party_size": 6,
+      "space_type": "birthday",
+      "received_at": "2026-11-19T15:00:00+00:00",
+      "needs_human": false
+    },
+    {
+      "id": "proc-4",
+      "client_id": "cli-2",
+      "status": "interested",
+      "party_size": 3,
+      "space_type": "table",
+      "received_at": "2026-11-20T09:15:00+00:00",
+      "needs_human": true
+    },
+    {
+      "id": "proc-5",
+      "client_id": "cli-3",
+      "status": "confirmed",
+      "party_size": 2,
+      "space_type": "terrace",
+      "received_at": "2026-11-20T11:00:00+00:00",
+      "needs_human": false
+    },
+    {
+      "id": "proc-6",
+      "client_id": "cli-3",
+      "status": "reserved",
+      "party_size": 5,
+      "space_type": "table",
+      "received_at": "2026-11-21T13:45:00+00:00",
+      "needs_human": false
+    },
+    {
+      "id": "proc-7",
+      "client_id": "cli-4",
+      "status": "interested",
+      "party_size": 8,
+      "space_type": "birthday",
+      "received_at": "2026-11-21T16:00:00+00:00",
+      "needs_human": true
+    },
+    {
+      "id": "proc-8",
+      "client_id": "cli-4",
+      "status": "confirmed",
+      "party_size": 2,
+      "space_type": "table",
+      "received_at": "2026-11-22T10:20:00+00:00",
+      "needs_human": false
+    },
+    {
+      "id": "proc-9",
+      "client_id": "cli-5",
+      "status": "reserved",
+      "party_size": 4,
+      "space_type": "terrace",
+      "received_at": "2026-11-22T18:00:00+00:00",
+      "needs_human": false
+    },
+    {
+      "id": "proc-10",
+      "client_id": "cli-5",
+      "status": "confirmed",
+      "party_size": 3,
+      "space_type": "table",
+      "received_at": "2026-11-23T09:00:00+00:00",
+      "needs_human": false
+    }
+  ]
+}

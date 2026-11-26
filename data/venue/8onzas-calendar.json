@@ -1,0 +1,36 @@
+{
+  "venue_id": "8onzas",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "slot_minutes": 90,
+  "capacity": {
+    "table": 8,
+    "terrace": 4,
+    "birthday": 12
+  },
+  "bookings": [
+    {
+      "date": "2026-11-28",
+      "time": "20:00",
+      "space": "table",
+      "party_size": 4
+    },
+    {
+      "date": "2026-11-28",
+      "time": "20:00",
+      "space": "table",
+      "party_size": 4
+    },
+    {
+      "date": "2026-11-27",
+      "time": "19:00",
+      "space": "table",
+      "party_size": 2
+    },
+    {
+      "date": "2026-11-28",
+      "time": "13:00",
+      "space": "terrace",
+      "party_size": 2
+    }
+  ]
+}

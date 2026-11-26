@@ -1,0 +1,32 @@
+{
+  "name": "deka",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deka monorepo — reservations for bars and cafés",
+  "workspaces": [
+    "frontend",
+    "e2e"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n web,api -c cyan,magenta \"npm run dev -w frontend\" \"npm run dev:api\"",
+    "dev:api": "uv run uvicorn backend.presentation.main:app --reload --host 127.0.0.1 --port 8000",
+    "check": "concurrently -n py,js,e2e -c green,blue,yellow \"npm run test:py\" \"npm run test:js\" \"npm run test:e2e\"",
+    "test:py": "uv run pytest",
+    "test:js": "npm run test -w frontend",
+    "test:e2e": "npm run test -w e2e",
+    "lint": "npm run lint:py && npm run lint:js",
+    "lint:py": "uv run ruff check backend/src agent/src && uv run bandit -q -r backend/src agent/src && uv run pylint backend/src/backend agent/src/agent",
+    "lint:js": "npm run lint -w frontend",
+    "typecheck": "npm run typecheck:py && npm run typecheck:js",
+    "typecheck:py": "uv run pyright",
+    "typecheck:js": "npm run typecheck -w frontend",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "husky": "^9.1.7"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "venue_id": "8onzas",
+  "cases": [
+    {
+      "id": "avail-free-slot",
+      "capability": "availability",
+      "user": "¿Hay mesa para 2 el viernes 27/11/2026 a las 19:00?",
+      "expect": {
+        "available": true,
+        "date": "2026-11-27",
+        "time": "19:00",
+        "party_size": 2,
+        "space": "table",
+        "must_mention": [],
+        "must_not_mention": []
+      }
+    },
+    {
+      "id": "avail-busy-slot",
+      "capability": "availability",
+      "user": "¿Hay mesa para 4 el sábado 28/11/2026 a las 20:00?",
+      "expect": {
+        "available": false,
+        "date": "2026-11-28",
+        "time": "20:00",
+        "party_size": 4,
+        "space": "table",
+        "must_mention": [],
+        "must_not_mention": []
+      }
+    },
+    {
+      "id": "avail-closed-monday",
+      "capability": "availability",
+      "user": "¿Puedo reservar mesa para 2 el lunes 30/11/2026 a las 12:00?",
+      "expect": {
+        "available": false,
+        "date": "2026-11-30",
+        "time": "12:00",
+        "party_size": 2,
+        "space": "table",
+        "must_mention": [],
+        "must_not_mention": []
+      }
+    },
+    {
+      "id": "avail-party-too-big",
+      "capability": "availability",
+      "user": "¿Hay mesa para 20 personas el viernes 27/11/2026 a las 19:00?",
+      "expect": {
+        "available": false,
+        "date": "2026-11-27",
+        "time": "19:00",
+        "party_size": 20,
+        "space": "table",
+        "must_mention": [],
+        "must_not_mention": []
+      }
+    }
+  ]
+}
