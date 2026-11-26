@@ -20,7 +20,7 @@
     "typecheck": "npm run typecheck:py && npm run typecheck:js",
     "typecheck:py": "uv run pyright",
     "typecheck:js": "npm run typecheck -w frontend",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
